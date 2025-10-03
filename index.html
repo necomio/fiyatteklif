@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixUp Cihaz Tamir Fiyat Teklifi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h1>FixUp Cihaz Tamir Teklifi Hesaplayicisi</h1>
+        <p>Lütfen cihazınızdaki arızaları işaretleyin. Tahmini tamir &uuml;cretiniz anında hesaplansın.</p>
+        
+        <div class="question-list">
+            
+            <div class="question-block">
+                <label>1. Kablosunda kırık ya da kopuk var mı?</label>
+                <div class="options">
+                    <label><input type="radio" name="ariza1" value="200" onchange="calculatePrice()"> Evet </label>
+                    <label><input type="radio" name="ariza1" value="0" onchange="calculatePrice()"> Hayır</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label>2. Açma - kapatma düğmesi olması gerektiği gibi çalışıyor mu?</label>
+                <div class="options">
+                    <label><input type="radio" name="ariza2" value="0" onchange="calculatePrice()"> Evet</label>
+                    <label><input type="radio" name="ariza2" value="100" onchange="calculatePrice()"> Hayır </label> 
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label>3. Fişe takıldığında sigorta veya koruma şalterinin kapanmasına sebep oluyor mu?</label>
+                <div class="options">
+                    <label><input type="radio" name="ariza3" value="300" onchange="calculatePrice()"> Evet </label>
+                    <label><input type="radio" name="ariza3" value="0" onchange="calculatePrice()"> Hayır</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label>4. Son kullanımda cihazdan yanık kokusu, duman veya patlama meydana geldi mi?</label>
+                <div class="options">
+                    <label><input type="radio" name="ariza4" value="300" onchange="calculatePrice()"> Evet </label>
+                    <label><input type="radio" name="ariza4" value="0" onchange="calculatePrice()"> Hayır</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <label>5. Cihazın gövdesi üzerinde erime yada bozulma var mı?</label>
+                <div class="options">
+                    <label><input type="radio" name="ariza5" value="200" onchange="calculatePrice()"> Evet </label>
+                    <label><input type="radio" name="ariza5" value="0" onchange="calculatePrice()"> Hayır</label>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="result-box">
+            <p>Sabit işçilik ve Arıza Tespit Ücreti (Tüm Tamirlere Eklenir): **<span id="basePrice">100 TL</span>**</p>
+            <p class="final-price">Tahmini Toplam Onarım &Uuml;creti:</p>
+            <div id="totalPrice" class="price-display">100 TL</div>
+        </div>
+        
+        <p class="disclaimer">Not: Bu fiyatlar tahmini olup, detaylı inceleme sonrası farklılık g&ouml;sterebilir.</p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
